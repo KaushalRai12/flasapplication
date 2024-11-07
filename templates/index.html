@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer Cards</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- First Row -->
+        <div class="row mb-4">
+            {% for i in range(1, 4) %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/soccer' + loop.index|string + '.jpg') }}" 
+                         class="card-img-top" alt="Soccer Image {{ loop.index }}">
+                    <div class="card-body">
+                        <h5 class="card-title">Soccer Image {{ loop.index }}</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Second Row -->
+        <div class="row">
+            {% for i in range(4, 7) %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/soccer' + loop.index|string + '.jpg') }}" 
+                         class="card-img-top" alt="Soccer Image {{ loop.index }}">
+                    <div class="card-body">
+                        <h5 class="card-title">Soccer Image {{ loop.index }}</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
